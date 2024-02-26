@@ -1,11 +1,11 @@
 steps:
 # Build the Docker image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/your-image-name', '.']
+  args: ['build', '-t', 'gcr.io/corp-dev-infra-test/Flask_!.0', '.']
 
 # Push the Docker image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/your-image-name']
+  args: ['push', 'gcr.io/corp-dev-infra-test/Flask_1.0']
 
 images:
-- 'gcr.io/$PROJECT_ID/your-image-name'
+- 'gcr.io/corp-dev-infra-test/Flask_1.0'
