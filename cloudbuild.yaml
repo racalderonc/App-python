@@ -1,11 +1,4 @@
-steps:
 # Build the Docker image
+steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-east4-docker.pkg.dev/corp-dev-infra-test/test-artifact/Flask', '.']
-
-# Push the Docker image to Container Registry
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-east4-docker.pkg.dev/corp-dev-infra-test/test-artifact/Flask']
-
-images:
-- 'us-east4-docker.pkg.dev/corp-dev-infra-test/test-artifact/Flask'
+  args: [ 'build', '-t', 'us-east4-docker.pkg.dev/corp-dev-infra-test/test-artifact/app-python', '.' ]
